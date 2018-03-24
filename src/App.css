@@ -1,28 +1,165 @@
-.App {
-  text-align: center;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1F2126;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body li {
+  color: #ddd;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+header {
+  color: #fff;
+  background-color: #103D5D;
+  padding: 33px 0 25px 15px;
 }
 
-.App-title {
-  font-size: 1.5em;
+header p {
+  width: 400px;
+  margin: 0 auto;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-intro {
-  font-size: large;
+header h1 {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fa {
+  font-size: 22px;
+  transform: translateY(50deg);
+}
+
+.header-brand {
+  position: relative;
+  top: -25px;
+  display: inline-block;
+  margin-bottom: 0;
+  color: #EF6732;
+  font-family: 'Bungee Inline', cursive;
+  font-size: 1.2em;
+}
+
+header i {
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+header i img {
+  height: 65px;
+}
+
+input {
+  font-size: 22px;
+  color: #000;
+  padding: 18px 22px;
+  font-size: 16px;
+  margin-bottom: 17px;
+  border: 0;
+  display: block;
+  width: 100%;
+  max-width: 1060px;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 2px;
+  min-width: 88px;
+  background-color: #FA6900;
+  cursor: pointer;
+  border: 0;
+  min-width: 120px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  padding: 10px 6px;
+  font-family: 'Bungee Inline', cursive;
+}
+
+.log-button {
+  float: right;
+  margin: 15px 40px 0 0;
+  font-family: 'Bungee Inline', cursive;
+}
+
+ul {
+  padding: 55px;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+.message-list {
+  overflow-y: auto;
+  height: 450px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.user-message {
+  width: 100%;
+  /* margin: 10px 0 10px; */
+  border-top: 1px solid #666867;
+}
+
+.user-message img {
+  display: inline-block;
+  border-radius: 15%;
+  max-width: 55px;
+}
+
+.user-message h4 {
+  margin-bottom: 5px;
+  margin-top: 0;
+  color: #598ABC;
+}
+
+.user-message div {
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  margin: 0 0 0 8px;
+  color: #a1a1a1;
+}
+
+.user-message p {
+  margin: 0 0 15px 65px;
+  max-width: 75%;
+}
+
+.moment {
+  display: block;
+}
+
+.prompt {
+  text-align:center;
+  align-self: center;
+  margin: 15% auto;
+  color: #ddd;
+}
+
+.prompt img {
+  width: 85px;
+  align-content: center;
 }
