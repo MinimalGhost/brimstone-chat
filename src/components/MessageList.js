@@ -32,11 +32,11 @@ class MessageList extends Component {
       })
     })
   }
-  
+
   componentDidUpdate() {
-    /* arbitrary ternary checks for active user to 
+    /* arbitrary ternary checks for active user to
      prevent bottom scroller bug when no user found */
-    {this.props.user ? 
+    {this.props.user ?
       // if there's a user, keep chat scrolled to the bottom
       this.scrollToBottom()
       :
@@ -55,7 +55,7 @@ class MessageList extends Component {
     e.preventDefault()
     // get the current date for moment.js
     let date = Date()
-    
+
     // create and add submitted message to firebase db
     const messagesRef = firebase.database().ref('messages');
     const message = {
@@ -66,24 +66,24 @@ class MessageList extends Component {
       date: date
     }
     messagesRef.push(message)
-    
+
     // update state with latest message
     this.setState({
       messages: [...this.state.messages, message],
       text: ''
     })
   }
-  
+
   scrollToBottom = () => {
-    // get access to the <ul> element via the ref 
+    // get access to the <ul> element via the ref
     const { messageList } = this.refs;
-    
-    /* then get the scroll height and the height of the 
+
+    /* then get the scroll height and the height of the
     <ul> element to calculate the maximum scroll top */
     const scrollHeight = messageList.scrollHeight;
     const height = messageList.clientHeight;
     const maxScrollTop = scrollHeight - height;
-    
+
     // gets an element that is currently on the DOM
     ReactDOM.findDOMNode(messageList).scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
   }
@@ -100,7 +100,7 @@ class MessageList extends Component {
         {this.props.user ?
           <div className="wrapper">
             <ul ref="messageList" className="message-list">
-              {currentMessages}    
+              {currentMessages}
             </ul>
             <form>
               <input name="text" value={this.state.text} onChange={this.handleChange} type="text" placeholder="Message" />

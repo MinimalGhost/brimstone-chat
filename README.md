@@ -1,10 +1,10 @@
-# VROOMvote
+# Brimstone Chat
 
-A platform for connecting people looking to volunteer as carpool drivers during the 2018 midterm elections with those who can't ordinarily make it to voting stations due to lack of transportation, disability, etc. Matches users by congressional district as either drivers or riders. Uses Google Civic Information, Maps and Geocoding API's. Demo video can be found [here](https://youtu.be/s7pBIScO4w4).
+Real time chat app using [React](https://reactjs.org/) and [Firebase](https://firebase.google.com/)
 
 ## Intalling / Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It also uses [npm](https://www.npmjs.com/) and a [react](https://reactjs.org/) based frontend. Credit to [react-moment](https://www.npmjs.com/package/react-moment) for timestamp support. The backend uses [Firebase](https://firebase.google.com/) for rapid prototyping and real time chat updates.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It also uses [npm](https://www.npmjs.com/) and a [React](https://reactjs.org/) based frontend. Credit to [react-moment](https://www.npmjs.com/package/react-moment) for timestamp support. The backend uses [Firebase](https://firebase.google.com/) for rapid prototyping and real time chat updates.
 
 ### Server setup
 
