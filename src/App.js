@@ -7,7 +7,7 @@ class App extends Component {
   state = {
     user: null
   }
-  
+
   componentDidMount() {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -15,7 +15,7 @@ class App extends Component {
       }
     })
   }
-  
+
   login = () => {
     // login button logic
     auth.signInWithPopup(provider)
@@ -36,19 +36,32 @@ class App extends Component {
         })
       })
   }
-  
+
   render() {
     return (
       <div className="App">
-      <header>
-        <i className="fa"><img src="brimstone.png" /></i><h4 className="header-brand">Brimstone Chat</h4>
-        {this.state.user ?
-          <button className="log-button" onClick={this.logout}>Log Out</button>
-          :
-          <button className="log-button" onClick={this.login}>Log In</button>
-        }
-      </header>
-        <MessageList user={this.state.user} />
+      {this.state.user ?
+        <div>
+          <header>
+            <i className="fa"><img src="brimstone.png" /></i><h4 className="header-brand">Brimstone Chat</h4>
+              <button className="log-button" onClick={this.logout}>Log Out</button>
+
+          </header>
+            <MessageList user={this.state.user} />
+        </div>
+        :
+        <div>
+          <header>
+            <i className="fa"><img src="brimstone.png" /></i><h4 className="header-brand">Brimstone Chat</h4>
+              <button className="log-button" onClick={this.login}>Log In</button>
+          </header>
+          <div className="prompt">
+            <p>Please log in</p>
+            <img src="flicker.png" />
+            <p>to use Brimstone chat</p>
+          </div>
+        </div>
+      }
       </div>
     );
   }

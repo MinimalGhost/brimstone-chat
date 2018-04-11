@@ -10,7 +10,7 @@ class MessageList extends Component {
     messages: []
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // grab all previous messages from firebase
     const messagesRef = firebase.database().ref('messages');
     messagesRef.on('value', (snapshot) => {
@@ -30,6 +30,7 @@ class MessageList extends Component {
       this.setState({
         messages: newState
       })
+      console.log(this.state.messages)
     })
   }
 
@@ -96,24 +97,14 @@ class MessageList extends Component {
       )
     })
     return (
-      <div>
-        {this.props.user ?
-          <div className="wrapper">
-            <ul ref="messageList" className="message-list">
-              {currentMessages}
-            </ul>
-            <form>
-              <input name="text" value={this.state.text} onChange={this.handleChange} type="text" placeholder="Message" />
-              <button onClick={this.handleSubmit}>Submit Message</button>
-            </form>
-          </div>
-          :
-          <div className="prompt">
-            <p>Please log in</p>
-            <img src="flicker.png" />
-            <p>to use Brimstone chat</p>
-          </div>
-        }
+      <div className="wrapper">
+        <ul ref="messageList" className="message-list">
+          {currentMessages}
+        </ul>
+        <form>
+          <input name="text" value={this.state.text} onChange={this.handleChange} type="text" placeholder="Message" />
+          <button onClick={this.handleSubmit}>Submit Message</button>
+        </form>
       </div>
     )
   }
